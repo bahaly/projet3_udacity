@@ -31,4 +31,4 @@ after_success:
   - docker push unknow223/udagram-api-feed
   - docker push unknow223/udagram-api-user
   - docker push unknow223/udagram-frontend
-  - docker push unknow223/reverseproxy
+  - docker push unknow223/udagram-reverseproxy
