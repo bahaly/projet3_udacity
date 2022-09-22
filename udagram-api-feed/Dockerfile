@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 #Lancez npm ci
 RUN npm ci 
-#RUN npm install typescript@latest
+RUN npm install typescript@latest
 # Regroupement des sources de l'application
 COPY . .
 EXPOSE 8080

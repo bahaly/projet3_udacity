@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udagram-api-feed
+    app: udagram-api-feed
   name: udagram-api-feed
 spec:
   selector:
@@ -16,6 +16,13 @@ spec:
     spec:
       containers:
       - image: unknow223/udagram-api-feed
+        envFrom:
+            - secretRef:
+                name: udagram-env-secret
+            - secretRef:
+                name: udagram-aws-secret
+            - configMapRef:
+                name: udagram-configmap
         name: udagram-api-feed
         imagePullPolicy: Always          
         resources:
@@ -23,10 +30,9 @@ spec:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
-            cpu: "500m"       
-        ports:
-        - containerPort: 8080
-      restartPolicy: Always
+            memory: "1724Mi"
+            cpu: "800m" 
+      ports:
+        - containerPort: 8080  
 
 
