@@ -5,5 +5,5 @@ metadata:
 data:
   AWS_REGION: us-east-1
   AWS_PROFILE: default
-  AWS_BUCKET: your-bucket-name
+  AWS_BUCKET: bucket-280862260255-dev
   URL: http://localhost:8100

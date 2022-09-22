@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    service: udagram-frontend
+  name: udagram-frontend
+  namespace: default
+spec:
+  ports:
+  - port: 8100
+    protocol: TCP
+    targetPort: 80
+  selector:
+    service: udagram-frontend
